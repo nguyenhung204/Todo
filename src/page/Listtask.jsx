@@ -36,7 +36,7 @@ function ListTask() {
 
   const handleTaskStatusChange = (taskId, newStatus) => {
     // Find the task to update
-    const taskToUpdate = tasks.find(task => task.id == taskId); // Use loose equality to match regardless of type
+    const taskToUpdate = tasks.find(task => task.id == taskId); 
     
     if (!taskToUpdate) {
       console.error(`Task with ID ${taskId} not found`);

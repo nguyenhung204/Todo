@@ -9,7 +9,7 @@ function TaskCard ({tasks, onStatusChange}) {
       e.stopPropagation();
       const newStatus = !completed;
       setCompleted(newStatus);
-
+  
       if (onStatusChange) {
         onStatusChange(tasks.id, newStatus);
       }
@@ -45,7 +45,9 @@ function TaskCard ({tasks, onStatusChange}) {
         >
           {tasks.priority}
         </span>
-        <label className="flex items-center cursor-pointer">
+        <label 
+          className="flex items-center cursor-pointer"
+          onClick={(e) => e.stopPropagation()}>
           <input
             type="checkbox"
             checked={completed}
